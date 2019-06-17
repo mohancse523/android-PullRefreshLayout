@@ -28,8 +28,8 @@ dependencies {
 apply plugin: 'com.jfrog.bintray'
 
 version = "1.2.0"
-def siteUrl = 'https://github.com/baoyongzhang/android-PullRefreshLayout'
-def gitUrl = 'https://github.com/baoyongzhang/android-PullRefreshLayout.git'
+/*def siteUrl = 'https://github.com/baoyongzhang/android-PullRefreshLayout'
+def gitUrl = 'https://github.com/baoyongzhang/android-PullRefreshLayout.git'*/
 group = "com.baoyz.pullrefreshlayout"
 /*install {
     repositories.mavenInstaller {
@@ -63,7 +63,7 @@ group = "com.baoyz.pullrefreshlayout"
         }
     }
 }*/
-task sourcesJar(type: Jar) {
+/*task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
 }
@@ -74,12 +74,12 @@ task javadoc(type: Javadoc) {
 task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
-}
-artifacts {
+}*/
+/*artifacts {
     archives javadocJar
     archives sourcesJar
-}
-Properties properties = new Properties()
+}*/
+/*Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
     user = properties.getProperty("bintray.user")
@@ -93,4 +93,4 @@ bintray {
         licenses = ["MIT"]
         publish = true
     }
-}
+}*/
