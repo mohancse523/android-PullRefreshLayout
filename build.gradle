@@ -3,8 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
         maven {
-            url "https://jcenter.bintray.com"
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
         }
         google()
     }
@@ -20,7 +25,17 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
